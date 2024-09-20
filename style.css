@@ -1,0 +1,401 @@
+@font-face {
+    font-family: RussoOne;
+    src: url(./fonts/RussoOne-Regular.ttf);
+}
+
+@keyframes animateBg {
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+
+    100% {opacity: 1;}
+  }
+
+@keyframes ani-end {
+    0% {opacity: 1;}
+
+    100% {opacity: 0;}
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url(./img/background-fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 600px;
+    height: 700px;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+    padding: 7px 7px;
+}
+
+.first-slide-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 86% !important;
+    padding: 50px 15px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: none !important;
+}
+
+.swiper-slide{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination{
+    width: 80px;
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+
+    font-family: RussoOne;
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+    font-size: 15px;
+    color: white;
+}
+
+.swiper-pagination-current, .swiper-pagination-total{
+    font-family: RussoOne;
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+    font-size: 15px;
+    color: white;
+}
+
+.flexed{
+    width: 100%;
+    height: 100%;
+    background: rgb(48, 44, 71);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+
+    border-radius: 35px;
+}
+
+.first-slide{
+    background-image: url(./img/questionImg/firstSlide/firstSlideImg-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gradient{
+    width: 1100px;
+    height: 1100px;
+    position: absolute;
+
+    background-image: linear-gradient(10deg, green, yellow, red, purple, blue);
+
+    z-index: -1;
+    animation: animateBg 5s linear infinite ;
+}
+
+h1{
+    text-align: center;
+    font-size: 35px;    
+    font-family: RussoOne;
+    color: white;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+
+    margin-bottom: 100px;
+}
+
+.first-slide-main{
+    height: 100%;
+
+    border-radius: 35px;
+
+    padding: 50px 15px;
+}
+
+.first-slide-main p{
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    font-family: RussoOne;
+    font-size: 25px;
+    color: white;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+
+    margin-bottom: 50px;
+}
+
+.first-slide-main input{
+    width: 80%;
+    height: 7%;
+    padding: 5px 10px;
+
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    font-size: 20px;
+    box-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+
+    margin-bottom: 70px;
+}
+
+.img-settings{
+    width: 85%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.slide-wrapper{
+    padding: 50px 20px;
+}
+
+.question{
+    text-align: center;
+    font-size: 22px;
+    font-family: RussoOne;
+    color: white;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+}
+
+.answer{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-family: RussoOne;
+    color: black;
+
+    transition: 0.3s;
+}
+
+.answer:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.isActive{
+    background-color: #87F;
+    color: white;
+}
+
+.end-slide{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: rgb(48, 44, 71);
+
+    display: none;
+}
+
+.end-container{
+    padding: 100px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-slide h1{
+    font-family: RussoOne;
+    color: white;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+    margin: 0;
+}
+
+.last-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+
+    background-image: url(./img/questionImg/lastSlide.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.end-button-disabled{
+    cursor: no-drop;
+    font-size: 22px;
+    font-family: RussoOne;
+    color: white;
+
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: grey;
+}
+
+.start-button-disabled{
+    cursor: no-drop;
+    font-size: 22px;
+    font-family: RussoOne;
+    color: white;
+
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: grey;
+}
+
+.end-button{
+    font-size: 22px;
+    font-family: RussoOne;
+    color: white;
+
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: #87F;
+    
+    transition: 0.4s;
+}
+
+.end-button:hover{
+    cursor: pointer;
+
+    transform: scale(1.1);
+    background-color: rgb(170, 157, 253);
+}
+
+.visible{
+    display: block !important;
+}
+
+.double-invisible{
+    display: none !important;
+}
+
+.invisible{
+    animation: ani-end 1.5s forwards !important;
+}
+
+.opening{
+    opacity: 0;
+    animation: ani 1.5s forwards;
+}
+
+.low-level{
+    background-image: url(https://i.yapx.cc/Gva9B.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-shadow: 0 0 0.3em rgb(228, 33, 33), 0 0 0.3em rgb(228, 33, 33), 0 0 0.3em rgb(228, 33, 33);
+}
+
+.lower-then-middle{
+    background-image: url(./img/questionImg/lastSlide/25-50.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-shadow: 0 0 0.3em rgb(235, 142, 4), 0 0 0.3em rgb(235, 142, 4), 0 0 0.3em rgb(235, 142, 4);
+}
+
+.middle-level{
+    background-image: url(./img/questionImg/lastSlide/50-75.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-shadow: 0 0 0.3em rgb(228, 253, 0), 0 0 0.3em rgb(228, 253, 0), 0 0 0.3em rgb(228, 253, 0);
+}
+
+.high-level{
+    background-image: url(./img/questionImg/lastSlide/75-95.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-shadow: 0 0 0.3em rgb(0, 240, 60), 0 0 0.3em rgb(0, 240, 60), 0 0 0.3em rgb(0, 240, 60);
+}
+
+.full-stolp{
+    background-image: url(./img/questionImg/lastSlide/100.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+}
+
+.persent-right-answer{
+    text-align: center;
+    font-size: 40px;
+    font-family: RussoOne;
+    color: white;
+
+    margin-bottom: 45px;
+}
+
+.persent-text{
+    text-align: center;
+    font-size: 30px;
+    font-family: RussoOne;
+    color: white;
+
+    margin-bottom: 55px;
+
+    text-shadow: 0 0 0.3em #87F, 0 0 0.3em #87F, 0 0 0.3em #87F;
+}
+
+.start-slide-wrapper{
+    transform: translate3d(0px, 0px, 0px) !important;
+}
